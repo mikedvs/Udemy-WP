@@ -56,7 +56,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="/"><img src="assets/img/logo.png" alt="Bootstrap to Wordpress"></a>
+						<a class="navbar-brand" href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="Bootstrap to Wordpress"></a>
 					</div><!-- nav header -->
 
 					<?php 
@@ -64,7 +64,8 @@
 							'theme_location' => 'primary',
 							'container' => 'nav',
 							'container_class' => 'navbar-collapse collapse',
-							'menu_class' => 'nav navbar-nav navbar-right'
+							'menu_class' => 'nav navbar-nav navbar-right',
+							'walker' => new description_walker()
 						));
 
 					?>
