@@ -28,7 +28,7 @@
 				<div class="post-comments-badge">
 					<a href="<?php comments_link(); ?>"><i class="fa fa-comments"></i> <?php comments_number( 0, 1, '%'); ?></a>
 				</div><!-- post-comments-badge -->
-				<?php edit_post_link( 'Edit', '<div><i class="fa fa-pencil></i>"', '</div>'); ?>
+				<?php edit_post_link( ' Edit', '<div><i class="fa fa-pencil"></i>', '</div>'); ?>
 			</div><!-- post-details -->
 		<?php
 		endif; ?>
