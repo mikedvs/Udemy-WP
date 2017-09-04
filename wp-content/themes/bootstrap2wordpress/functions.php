@@ -149,6 +149,13 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+// Replaces the excerpt "Read More" text by a link
+function new_excerpt_more($more) {
+	global $post;
+ return '<a class="moretag" href="'. get_permalink($post->ID) . '"> Continue reading...</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
 /**
  * Load Jetpack compatibility file.
  */
