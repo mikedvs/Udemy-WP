@@ -1125,3 +1125,8 @@ footer li.signup-link a:hover {
 		margin-right: 0;
 	}
 }
+
+.navbar-nav > li.current-menu-item a,
+.navbar-nav > li.current_page_parent {
+	color: white;
+}

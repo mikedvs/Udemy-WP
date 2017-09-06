@@ -45,6 +45,7 @@ if ( ! function_exists( 'bootstrap2wordpress_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Primary', 'bootstrap2wordpress' ),
+			'footer' => esc_html__( 'Footer Menu', 'bootstrap2wordpress' ),
 		) );
 
 		/*
@@ -104,6 +105,15 @@ function bootstrap2wordpress_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'bootstrap2wordpress' ),
 		'id'            => 'sidebar-1',
+		'description'   => esc_html__( 'Add widgets here.', 'bootstrap2wordpress' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Extra Sidebar', 'bootstrap2wordpress' ),
+		'id'            => 'sidebar-2',
 		'description'   => esc_html__( 'Add widgets here.', 'bootstrap2wordpress' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
