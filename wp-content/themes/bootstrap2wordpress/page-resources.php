@@ -86,4 +86,4 @@ $thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
 		</div><!-- container -->
     </section><!-- signup -->
     
-<?php get_footer(); ?>
+<?php get_footer();
